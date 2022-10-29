@@ -8,7 +8,7 @@ generateBtn.addEventListener("click", writePassword);
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "1234567890"
-var special = "@#$%^&*()";
+var special = "~`! @#$%^&*()_-+={[}]|;<,>.?/";
 
 // string that will be created with content computer can randomly choose from, based on users' choices
 var userAnswers = []
@@ -53,23 +53,19 @@ function generatePassword() {
 
 // Password generating function
 var password =''; 
-  for(var i = 0; passwordLength; i++) {
+  for(var i = 0; i <= passwordLength; i++) {
     var userAnswersIndex = Math.floor(Math.random() * userAnswers.length);
-    
     var selection = userAnswers[userAnswersIndex];
     password += selection[Math.floor(Math.random() * selection.length)];
 }
 console.log(password)
+var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+
 }
-
-
-
-
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  
 }
