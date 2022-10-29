@@ -25,35 +25,34 @@ var userAnswers = []
 //Function for users' password length
 var generatePassword = function() {
   // User chooses length of password
-  var passwordLength = prompt("How many characters would you like your password to be? Please select a character amount between 8 and 128");
-    if(Number(passwordLength > 7 && passwordLength.value < 129)){
+  var passwordLength = prompt("How many characters would you like your password to be? Please select between 8 and 128 characters");
+    if(Number(passwordLength > 7 && passwordLength < 129)){
     userChoices(passwordLength);
 
-    } else {
+  } else {
     alert('Length must be between 8 and 128 charatcters.');
-    prompt("How many characters would you like your password to be? Please select a character amount between 8 and 128");
+    prompt("How many characters would you like your password to be? Please select between 8 and 128 characters");
 
   }
-}
 
 // Functions for users to set the characters they want to include in their password
 var userChoices = (passwordLength) => {
   var upperSelection = confirm("Would you like uppercase letters?");
   if(upperSelection){
    userAnswers.push(uppercase)
-  }
+    }
   let lowerSelection = window.confirm("Would you like lowercase letters?");
   if(lowerSelection){
     userAnswers.push(lowercase)
-  }
+    }
   let numbersSelection = window.confirm("Would you like numbers?");
   if(numbersSelection){
     userAnswers.push(numbers)
-  }
+    }
   let specialSelection = window.confirm("Would you like special characters?");
   if(specialSelection ){
     userAnswers.push(special)
-  }
+    }
 
   console.log(userAnswers)
 
@@ -61,10 +60,9 @@ var userChoices = (passwordLength) => {
   if(userAnswers.length === 0){
     alert('You must select at least one character type. Please try again.')
     return;
+    }
+
   }
-
-}
-
 // Password generating function
 let passwordChosen =''; 
   for(var i = 0; passwordLength.valueOf; i++) {
@@ -74,6 +72,8 @@ let passwordChosen ='';
 }
 
 console.log(passwordChosen)
+
+}
 
 // Write password to the #password input
 function writePassword() {
