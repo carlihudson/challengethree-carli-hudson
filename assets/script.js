@@ -29,11 +29,11 @@ var generatePassword = function() {
     if(Number(passwordLength < 7 && passwordLength > 129)){
       alert('Length must be between 8 and 128 charatcters.');
       prompt("How many characters would you like your password to be? Please select a character amount between 8 and 128");
+    } 
   }
 
 // Functions for users to set the characters they want to include in their password
   var userChoices = function() {
-    prompt upperSelect
     if(upperSelect){
     userAnswers.push(uppercase)
   }
@@ -59,11 +59,11 @@ var generatePassword = function() {
   }
 
 }
-}
+
 
 // Password generating function
 // let passwordChosen =''; 
-//   for(var i = 0; passwordLength.valueOf; i++) {
+//   for(var i = 0; passwordLength; i++) {
 //     var userChoicesIndex = Math.floor(Math.random() * userChoices.length);
 //     var selection = userAnswers[userChoicesIndex];
 //     password += selection[Math.floor(Math.random() * selection.length)];
