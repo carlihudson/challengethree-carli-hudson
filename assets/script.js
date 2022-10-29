@@ -26,7 +26,7 @@ var userAnswers = []
 var generatePassword = function() {
   // User chooses length of password
   var passwordLength = prompt("How many characters would you like your password to be? Please select a character amount between 8 and 128");
-    if(Number(passwordLength > 7 && passwordLength.value < 129)){
+    if(Number(passwordLength > 7 && passwordLength < 129)){
     userChoices(passwordLength);
 
     } else {
@@ -34,7 +34,7 @@ var generatePassword = function() {
     prompt("How many characters would you like your password to be? Please select a character amount between 8 and 128");
 
   }
-}
+
 
 // Functions for users to set the characters they want to include in their password
 var userChoices = (passwordLength) => {
@@ -72,8 +72,9 @@ let passwordChosen ='';
     var selection = userAnswers[userChoicesIndex];
     password += selection[Math.floor(Math.random() * selection.length)];
 }
-
 console.log(passwordChosen)
+}
+
 
 // Write password to the #password input
 function writePassword() {
