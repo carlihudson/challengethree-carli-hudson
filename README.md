@@ -1,100 +1,22 @@
-# 03 JavaScript: Password Generator
+# Challenge Three - JavaScript Password Generator
 
-## Your Task
+## Description
+This week's assignment was to create a random password generator where users get prompts to pick the length, and the types of characters used in it. The assignment was completely in JavaScript, and we had to build the application from a small amount of starter code.
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+Unlike CSS and HTML, in JavaScript you really have to think like a computer would, and break down every single aspect of what you want your application to do. Creating a random password generator helps students like me get their feet wet into just how much you have to break it down -- it's not too complex, but complex enough that it includes many aspects of JavaScript such as variables, functions, and loops.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+This project took me from thinking I had the jist of JavaScript down, to realizing just how much practice I need. Reverse engineering JavaScript is relatively easy for me, but doing it the other direction and writing it myself is still quite a challenge for me. Many parts of my final project are things that we didn't actually learn during class hours. One of which is a while loop, which makes the function repeat itself until correct criteria (in this case a value between 8 and 128) is entered. Additionally, using the .push method to get the users' selected criteria into an array for the randomizing function to choose from was something my tutor showed me, as well as Jonathan in office hours.
 
-## User Story
+![Alt text](./assets/images/application-screenshot.png)
+In the above screenshot, you can see that the array displayed in the console, as well as the generated password, doesn't have numbers in it (despite there being a numbers string in the .js file). This is because when prompted, the user selected no on their password containing numbers, so numbers weren't included in the userAnswers array variable.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
 
-## Acceptance Criteria
+## Link
+You can check out my application at https://carlihudson.github.io/javascript-password-generator-carli
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Usage
+This application can be used to help users with sensitive data to generate a completely random password nearly impossible for anyone to figure out. 
 
-## Mock-Up
+## Credits
+This week, I worked with two of my classmates, Ken Gibson and Juan Sanchez. The three of us had many conversations and even a Friday night zoom session to walk through what was needed step by step. Additionally, I had help from my tutor, Corrado Alfano, and instructor, Jonathan Harvey.
 
-The following image shows the web application's appearance and functionality:
-
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
