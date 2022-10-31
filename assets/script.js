@@ -60,13 +60,14 @@ var password ='';
     password += selection[Math.floor(Math.random() * selection.length)];
   } 
   console.log(password)
+  return password;
 
 
 }
 
 // Write password to the #password input
 function writePassword() {
-  generatePassword();
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
   
